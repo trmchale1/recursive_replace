@@ -5,12 +5,12 @@ string replace(string x){
 	if(x.find(" ") == -1){return x;}
 	else{
 		z = x.find(" ");
-		x.replace(z,1,"*");
-		return replace(x);
+		return replace(x.replace(z,1,"*"));
+		
 	}	
 }
 int main(){
-	string a = "    John    Benard    Shaw     ";
+	string a = "John Benard Shaw";
 	a = replace(a);
 	cout << a << endl;
 	return 0;
